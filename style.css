@@ -85,6 +85,7 @@ p { margin: 0; }
 .tasks-table th.sortable.sorted-asc:after { border-top-color: transparent; border-bottom-color: var(--muted); transform: translateY(-2px); }
 .tasks-table th.num, .tasks-table td.num { text-align: right; }
 .tasks-table th.min, .tasks-table td.min { width: 36px; text-align: center; }
+.tasks-table tbody tr.task-row { cursor: pointer; }
 .tasks-table tbody tr:hover { background: #fafbfc; }
 .tasks-table th .icon-btn { vertical-align: middle; margin-left: 4px; }
 

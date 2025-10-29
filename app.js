@@ -300,15 +300,12 @@ function render() {
         </div>
       </div>`;
     tr.appendChild(tdIssue);
-    // Toggle details on clicking the top area (excluding links)
-    const topEl = tdIssue.querySelector('.top');
-    if (topEl) {
-      topEl.style.cursor = 'pointer';
-      topEl.addEventListener('click', (e) => {
-        if (e.target.closest('a')) return; // don't toggle when clicking a link
-        toggleDetails(t.key);
-      });
-    }
+    // Сделать кликабельной всю строку (кроме интерактивных элементов)
+    tr.classList.add('task-row');
+    tr.addEventListener('click', (e) => {
+      if (e.target.closest('a, button, input, select, textarea')) return;
+      toggleDetails(t.key);
+    });
 
     // Оценка
     const tdEst = document.createElement('td');
